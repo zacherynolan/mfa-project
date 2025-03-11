@@ -12,5 +12,8 @@ Rails.application.routes.draw do
   root to: redirect('/home')
 
   get 'home', to: "pages#home", as: 'home'
+
+  post 'users', to: 'users#create', as: 'users'
+  get 'users/new', to: 'users#new', as: 'new_user'
 end
 
