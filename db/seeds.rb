@@ -13,5 +13,6 @@ user1 = User.create!(
     address: '5636 Wolf Pack Drive',
     phone: '901-341-9919',
     email: 'zacherynolan@yahoo.com',
+    balance: 0,
     password: 'Zachery27'
 )

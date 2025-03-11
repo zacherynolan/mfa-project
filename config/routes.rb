@@ -15,5 +15,6 @@ Rails.application.routes.draw do
 
   post 'users', to: 'users#create', as: 'users'
   get 'users/new', to: 'users#new', as: 'new_user'
+  get 'users/:id', to: 'users#show', as: 'user'
 end
 
