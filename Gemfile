@@ -66,6 +66,8 @@ group :test do
   gem "selenium-webdriver"
 end
 
+# Custom Gems
+
 # Preset CSS styles
 gem 'bootstrap', '~> 5.2.3'
 

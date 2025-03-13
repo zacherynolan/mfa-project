@@ -1,9 +1,11 @@
 class UsersController < ApplicationController
-
+    before_action :authenticate_user!, except: [:new, :create]
+    
     def show
         @user = User.find(params[:id])
         render :show
     end
+    
     def new
         @user = User.new
         render :new
@@ -14,7 +16,7 @@ class UsersController < ApplicationController
         
         if @user.save
             flash[:success] = 'Registration Successful!'
-            redirect_to home_url
+            redirect_to user_url(@user)
         else
             flash.now[:error] = 'Registration failed...'
             render :new, status: :unprocessable_entity

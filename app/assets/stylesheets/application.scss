@@ -19,3 +19,15 @@
 @import "flatly/bootswatch";
 
 @import "rails_bootstrap_forms";
+
+label.required:after {
+    content:" *";
+  }
+  
+  main {
+    margin-top: 20px;
+  }
+  
+  .alert-dismissible {
+    padding-left: $alert-dismissible-padding-r;
+  }
