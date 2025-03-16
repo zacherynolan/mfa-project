@@ -79,3 +79,6 @@ gem 'bootstrap_form', '~> 5.2.3'
 
 # Authentication
 gem 'devise'
+gem "devise-two-factor", "~> 6.1"
+
+gem 'rqrcode'
