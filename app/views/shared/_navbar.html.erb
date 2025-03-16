@@ -24,7 +24,10 @@
                             class: "nav-link #{active_class(edit_user_registration_path)} btn btn-link" %>
                     </li>
                     <li class="nav-item">
-                        <%= link_to 'My Account', user_path(current_user), class: "nav-link #{active_class(user_path(current_user))} btn btn-link" %>
+                        <%= link_to 'Account Overview', user_path(current_user), class: "nav-link #{active_class(user_path(current_user))} btn btn-link" %>
+                    </li>
+                    <li class="nav-item">
+                        <%= link_to 'Update Account', edit_user_path(current_user), class: "nav-link #{active_class(edit_user_path(current_user))} btn btn-link" %>
                     </li>
                     <li class="nav-item">
                         <%= button_to 'Sign Out', destroy_user_session_path,

@@ -11,6 +11,11 @@ class UsersController < ApplicationController
         render :new
     end
 
+    def edit
+        @user = User.find(params[:id])
+        render :edit
+    end
+
     def create
         @user = User.new(params.require(:user).permit(:name, :address, :email, :phone, :password))
         
@@ -20,6 +25,17 @@ class UsersController < ApplicationController
         else
             flash.now[:error] = 'Registration failed...'
             render :new, status: :unprocessable_entity
+        end
+    end
+
+    def update
+        @user = User.find(params[:id])
+        if @user.update(params.require(:user).permit(:name, :address, :email, :phone, :balance))
+            flash[:success] = 'Account successfully updated!'
+            redirect_to user_url(@user)
+        else
+            flash.now[:error] = 'Account update failed'
+            render :edit, status: :unprocessable_entity
         end
     end
 
