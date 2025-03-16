@@ -1,4 +1,6 @@
 <h1>Welcome to Zach's Banking App!</h1>
+<hr>
+<br>
 
 <% if user_signed_in? %>
     <%= raw RQRCode::QRCode.new(current_user.otp_provisioning_uri(current_user.email, issuer: "Devise-Two-Factor-Demo"),
