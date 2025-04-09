@@ -34,7 +34,7 @@ class UsersController < ApplicationController
             flash[:success] = 'Account successfully updated!'
             redirect_to user_url(@user)
         else
-            flash.now[:error] = 'Account update failed'
+            flash.now[:error] = 'Account update failed...'
             render :edit, status: :unprocessable_entity
         end
     end
